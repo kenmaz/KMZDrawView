@@ -9,8 +9,15 @@
 #import <UIKit/UIKit.h>
 #import "KMZFrame.h"
 
+@class KMZDrawView;
+
+@protocol KMZDrawViewDelegate
+- (void)drawView:(KMZDrawView*)drawView finishDrawLine:(KMZLine*)line;
+@end
+
 @interface KMZDrawView : UIImageView
 
+@property (nonatomic, weak) id<KMZDrawViewDelegate> delegate;
 @property (nonatomic) CGPoint lastPoint;
 @property (nonatomic, strong) KMZFrame* currentFrame;
 @property (nonatomic, strong) KMZLine* currentLine;
@@ -21,5 +28,7 @@
 
 - (void)undo;
 - (void)redo;
+- (BOOL)isUndoable;
+- (BOOL)isRedoable;
 
 @end

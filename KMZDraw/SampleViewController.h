@@ -9,13 +9,13 @@
 #import <UIKit/UIKit.h>
 #import "KMZDrawView.h"
 
-@interface SampleViewController : UIViewController
+@interface SampleViewController : UIViewController <KMZDrawViewDelegate>
 
 @property (weak, nonatomic) IBOutlet UISegmentedControl *penSelector;
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *colorButton;
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *undoButtonItem;
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *redoButtonItem;
-@property (weak, nonatomic) IBOutlet KMZDrawView *canvasView;
+@property (weak, nonatomic) IBOutlet KMZDrawView *drawView;
 
 - (IBAction)touchUndoButton:(id)sender;
 - (IBAction)touchRedoButton:(id)sender;

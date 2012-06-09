@@ -10,6 +10,8 @@
 
 @implementation KMZDrawView
 
+@synthesize delegate;
+
 @synthesize lastPoint;
 @synthesize currentFrame;
 @synthesize currentLine;
@@ -34,6 +36,7 @@
 }
 
 - (void)dealloc {
+    self.delegate = nil;
     self.currentFrame = nil;
     self.currentLine = nil;
 }
@@ -57,7 +60,8 @@
     self.currentLine = [[KMZLine alloc] initWithPenMode:self.penMode width:self.penWidth color:self.penColor path:path];
     CFRelease(path);
     
-	[self.currentFrame.lines addObject:currentLine];	
+	[self.currentFrame addLine:currentLine];
+    
 	[currentLine moveToPoint:pt];
 }
 
@@ -98,22 +102,32 @@
 	
 	self.currentFrame.image = self.image;
     
+    [self.delegate drawView:self finishDrawLine:currentLine];
 	self.currentLine = nil;
 }
 
 #pragma mark public function
 
 - (void)undo {
-    if ([self.currentFrame isUndoable]) {
-        [self.currentFrame undo];
-        self.image = self.currentFrame.image;
-        self.currentLine = nil;
-        [self setNeedsDisplay];
-    }
+    [self.currentFrame undo];
+    self.image = self.currentFrame.image;
+    self.currentLine = nil;
+    [self setNeedsDisplay];
 }
 
 - (void)redo {
-    
+    [self.currentFrame redo];
+    self.image = self.currentFrame.image;
+    self.currentLine = nil;
+    [self setNeedsDisplay];
+}
+
+- (BOOL)isUndoable {
+    return [self.currentFrame isUndoable];
+}
+
+- (BOOL)isRedoable {
+    return [self.currentFrame isRedoable];
 }
 
 @end

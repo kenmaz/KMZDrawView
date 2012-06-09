@@ -11,6 +11,7 @@
 @implementation KMZFrame
 
 @synthesize lines;
+@synthesize lineCursor;
 @synthesize frameSize;
 @synthesize image;
 
@@ -18,6 +19,7 @@
     if ((self = [super init])) {
         self.frameSize = size;
         self.lines = [[NSMutableArray alloc] init];
+        self.lineCursor = 0;
     }
     return self;
 }
@@ -28,6 +30,14 @@
 }
 
 #pragma mark public
+
+- (void)addLine:(KMZLine*)line {
+    if ([self.lines count] > self.lineCursor) {
+        [self.lines removeObjectsInRange:NSMakeRange(self.lineCursor, [self.lines count] - self.lineCursor)];
+    }
+    [self.lines insertObject:line atIndex:self.lineCursor];
+    self.lineCursor += 1;
+}
 
 - (void)drawLine:(CGContextRef)contextRef 
             line:(KMZLine*)line 
@@ -54,9 +64,7 @@
 	UIGraphicsBeginImageContext(self.frameSize);
 	CGContextRef contextRef = UIGraphicsGetCurrentContext();
 	
-	for(KMZLine *line in self.lines){
-		[self drawLine:contextRef line:line];
-	}
+    [self drawImage:contextRef];
 	
 	CGImageRef imgRef = CGBitmapContextCreateImage(contextRef);
 	self.image = [UIImage imageWithCGImage:imgRef];
@@ -65,20 +73,28 @@
 }
 
 - (void)drawImage:(CGContextRef)contextRef {   
-	for(KMZLine *line in self.lines){
-		[self drawLine:contextRef line:line];
-	}
-}
-
-- (BOOL)isUndoable {
-	return [self.lines count] > 0;
+    for (int i = 0; i < self.lineCursor; i++) {
+        KMZLine* line = [self.lines objectAtIndex:i];
+        [self drawLine:contextRef line:line];
+    }
 }
 
 - (void)undo {
-	if ([self isUndoable]) {
-		[self.lines removeLastObject];
-		[self drawImage];
-	}
+    self.lineCursor -= 1;
+	[self drawImage];
+}
+
+- (void)redo {
+    self.lineCursor += 1;
+    [self drawImage];
+}
+
+- (BOOL)isUndoable {
+    return self.lineCursor > 0;
+}
+
+- (BOOL)isRedoable {
+    return [self.lines count] > self.lineCursor;
 }
 
 #pragma mark private

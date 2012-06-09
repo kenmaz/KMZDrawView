@@ -15,19 +15,20 @@
 @implementation SampleViewController
 @synthesize penSelector;
 @synthesize colorButton;
-@synthesize canvasView;
+@synthesize drawView;
 @synthesize undoButtonItem;
 @synthesize redoButtonItem;
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
+    self.drawView.delegate = self;
+    [self updateUndoRedoButton];
 }
 
 - (void)viewDidUnload
 {
-    [self setCanvasView:nil];
+    [self setDrawView:nil];
     [self setColorButton:nil];
     [self setUndoButtonItem:nil];
     [self setRedoButtonItem:nil];
@@ -46,11 +47,13 @@
 }
 
 - (IBAction)touchUndoButton:(id)sender {
-    [self.canvasView undo];
+    [self.drawView undo];
+    [self updateUndoRedoButton];
 }
 
 - (IBAction)touchRedoButton:(id)sender {
-    [self.canvasView redo];
+    [self.drawView redo];
+    [self updateUndoRedoButton];
 }
 
 - (IBAction)touchColorButton:(id)sender {
@@ -59,10 +62,20 @@
 - (IBAction)touchPenSelector:(id)sender {
     NSInteger idx = self.penSelector.selectedSegmentIndex;
     if (idx == 0) {
-        self.canvasView.penMode = KMZLinePenModePencil;
+        self.drawView.penMode = KMZLinePenModePencil;
     } else {
-        self.canvasView.penMode = KMZLinePenModeEraser;   
+        self.drawView.penMode = KMZLinePenModeEraser;   
     }
+}
+
+- (void)updateUndoRedoButton {
+    self.undoButtonItem.enabled = [self.drawView isUndoable];
+    self.redoButtonItem.enabled = [self.drawView isRedoable];
+}
+
+#pragma mark KMZDrawViewDelegate
+- (void)drawView:(KMZDrawView*)drawView finishDrawLine:(KMZLine*)line {
+    [self updateUndoRedoButton];
 }
 
 @end

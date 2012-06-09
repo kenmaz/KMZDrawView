@@ -13,16 +13,21 @@
 
 @property CGSize frameSize;
 @property (nonatomic, strong) NSMutableArray* lines;
+@property (nonatomic) NSInteger lineCursor;
 @property (nonatomic, strong) UIImage* image;
 
 - (id)initWithSize:(CGSize)size;
+- (void)addLine:(KMZLine*)line;
 - (void)drawLine:(CGContextRef)contextRef 
             line:(KMZLine*)line 
       beginPoint:(CGPoint)beginPoint 
         endPoint:(CGPoint)endPoint;
 - (void)drawImage;
 - (void)drawImage:(CGContextRef)contextRef;
-- (BOOL)isUndoable;
+
 - (void)undo;
+- (void)redo;
+- (BOOL)isUndoable;
+- (BOOL)isRedoable;
 
 @end
