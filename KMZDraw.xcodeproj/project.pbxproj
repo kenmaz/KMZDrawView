@@ -12,15 +12,21 @@
 		8A87368B1583208B000B035D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A87368A1583208B000B035D /* CoreGraphics.framework */; };
 		8A8736911583208B000B035D /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8A87368F1583208B000B035D /* InfoPlist.strings */; };
 		8A8736931583208B000B035D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A8736921583208B000B035D /* main.m */; };
-		8A8736971583208B000B035D /* KMZAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A8736961583208B000B035D /* KMZAppDelegate.m */; };
-		8A87369A1583208B000B035D /* KMZViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A8736991583208B000B035D /* KMZViewController.m */; };
-		8A87369D1583208B000B035D /* KMZViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8A87369B1583208B000B035D /* KMZViewController_iPhone.xib */; };
-		8A8736A01583208B000B035D /* KMZViewController_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8A87369E1583208B000B035D /* KMZViewController_iPad.xib */; };
+		8A8736971583208B000B035D /* SampleAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A8736961583208B000B035D /* SampleAppDelegate.m */; };
+		8A87369A1583208B000B035D /* SampleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A8736991583208B000B035D /* SampleViewController.m */; };
+		8A87369D1583208B000B035D /* SampleViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8A87369B1583208B000B035D /* SampleViewController_iPhone.xib */; };
+		8A8736A01583208B000B035D /* SampleViewController_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8A87369E1583208B000B035D /* SampleViewController_iPad.xib */; };
 		8A8736A81583208B000B035D /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A8736A71583208B000B035D /* SenTestingKit.framework */; };
 		8A8736A91583208B000B035D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A8736861583208B000B035D /* UIKit.framework */; };
 		8A8736AA1583208B000B035D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A8736881583208B000B035D /* Foundation.framework */; };
 		8A8736B21583208B000B035D /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8A8736B01583208B000B035D /* InfoPlist.strings */; };
 		8A8736B51583208B000B035D /* KMZDrawTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A8736B41583208B000B035D /* KMZDrawTests.m */; };
+		8A8736C11583218B000B035D /* KMZDrawView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A8736C01583218B000B035D /* KMZDrawView.m */; };
+		8A8736C21583218B000B035D /* KMZDrawView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A8736C01583218B000B035D /* KMZDrawView.m */; };
+		8A8736C5158322EF000B035D /* KMZLine.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A8736C4158322EF000B035D /* KMZLine.m */; };
+		8A8736C6158322EF000B035D /* KMZLine.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A8736C4158322EF000B035D /* KMZLine.m */; };
+		8A8736C9158327DA000B035D /* KMZFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A8736C8158327DA000B035D /* KMZFrame.m */; };
+		8A8736CA158327DA000B035D /* KMZFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A8736C8158327DA000B035D /* KMZFrame.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,22 +44,28 @@
 		8A8736861583208B000B035D /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		8A8736881583208B000B035D /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		8A87368A1583208B000B035D /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		8A87368E1583208B000B035D /* KMZDraw-Info.plist */ = {isa = PBXFileReference; path = "KMZDraw-Info.plist"; sourceTree = "<group>"; };
+		8A87368E1583208B000B035D /* KMZDraw-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "KMZDraw-Info.plist"; sourceTree = "<group>"; };
 		8A8736901583208B000B035D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		8A8736921583208B000B035D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		8A8736941583208B000B035D /* KMZDraw-Prefix.pch */ = {isa = PBXFileReference; path = "KMZDraw-Prefix.pch"; sourceTree = "<group>"; };
-		8A8736951583208B000B035D /* KMZAppDelegate.h */ = {isa = PBXFileReference; path = KMZAppDelegate.h; sourceTree = "<group>"; };
-		8A8736961583208B000B035D /* KMZAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KMZAppDelegate.m; sourceTree = "<group>"; };
-		8A8736981583208B000B035D /* KMZViewController.h */ = {isa = PBXFileReference; path = KMZViewController.h; sourceTree = "<group>"; };
-		8A8736991583208B000B035D /* KMZViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KMZViewController.m; sourceTree = "<group>"; };
-		8A87369C1583208B000B035D /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/KMZViewController_iPhone.xib; sourceTree = "<group>"; };
-		8A87369F1583208B000B035D /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/KMZViewController_iPad.xib; sourceTree = "<group>"; };
+		8A8736941583208B000B035D /* KMZDraw-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "KMZDraw-Prefix.pch"; sourceTree = "<group>"; };
+		8A8736951583208B000B035D /* SampleAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SampleAppDelegate.h; sourceTree = "<group>"; };
+		8A8736961583208B000B035D /* SampleAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SampleAppDelegate.m; sourceTree = "<group>"; };
+		8A8736981583208B000B035D /* SampleViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SampleViewController.h; sourceTree = "<group>"; };
+		8A8736991583208B000B035D /* SampleViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SampleViewController.m; sourceTree = "<group>"; };
+		8A87369C1583208B000B035D /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/SampleViewController_iPhone.xib; sourceTree = "<group>"; };
+		8A87369F1583208B000B035D /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/SampleViewController_iPad.xib; sourceTree = "<group>"; };
 		8A8736A61583208B000B035D /* KMZDrawTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KMZDrawTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8A8736A71583208B000B035D /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
-		8A8736AF1583208B000B035D /* KMZDrawTests-Info.plist */ = {isa = PBXFileReference; path = "KMZDrawTests-Info.plist"; sourceTree = "<group>"; };
+		8A8736AF1583208B000B035D /* KMZDrawTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "KMZDrawTests-Info.plist"; sourceTree = "<group>"; };
 		8A8736B11583208B000B035D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		8A8736B31583208B000B035D /* KMZDrawTests.h */ = {isa = PBXFileReference; path = KMZDrawTests.h; sourceTree = "<group>"; };
+		8A8736B31583208B000B035D /* KMZDrawTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KMZDrawTests.h; sourceTree = "<group>"; };
 		8A8736B41583208B000B035D /* KMZDrawTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KMZDrawTests.m; sourceTree = "<group>"; };
+		8A8736BF1583218B000B035D /* KMZDrawView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KMZDrawView.h; sourceTree = "<group>"; };
+		8A8736C01583218B000B035D /* KMZDrawView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KMZDrawView.m; sourceTree = "<group>"; };
+		8A8736C3158322EF000B035D /* KMZLine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KMZLine.h; sourceTree = "<group>"; };
+		8A8736C4158322EF000B035D /* KMZLine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KMZLine.m; sourceTree = "<group>"; };
+		8A8736C7158327DA000B035D /* KMZFrame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KMZFrame.h; sourceTree = "<group>"; };
+		8A8736C8158327DA000B035D /* KMZFrame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KMZFrame.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,7 +95,8 @@
 		8A8736771583208B000B035D = {
 			isa = PBXGroup;
 			children = (
-				8A87368C1583208B000B035D /* KMZDraw */,
+				8A8736BE158320EF000B035D /* lib */,
+				8A87368C1583208B000B035D /* SampleApp */,
 				8A8736AD1583208B000B035D /* KMZDrawTests */,
 				8A8736851583208B000B035D /* Frameworks */,
 				8A8736831583208B000B035D /* Products */,
@@ -110,17 +123,18 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		8A87368C1583208B000B035D /* KMZDraw */ = {
+		8A87368C1583208B000B035D /* SampleApp */ = {
 			isa = PBXGroup;
 			children = (
-				8A8736951583208B000B035D /* KMZAppDelegate.h */,
-				8A8736961583208B000B035D /* KMZAppDelegate.m */,
-				8A8736981583208B000B035D /* KMZViewController.h */,
-				8A8736991583208B000B035D /* KMZViewController.m */,
-				8A87369B1583208B000B035D /* KMZViewController_iPhone.xib */,
-				8A87369E1583208B000B035D /* KMZViewController_iPad.xib */,
+				8A8736951583208B000B035D /* SampleAppDelegate.h */,
+				8A8736961583208B000B035D /* SampleAppDelegate.m */,
+				8A8736981583208B000B035D /* SampleViewController.h */,
+				8A8736991583208B000B035D /* SampleViewController.m */,
+				8A87369B1583208B000B035D /* SampleViewController_iPhone.xib */,
+				8A87369E1583208B000B035D /* SampleViewController_iPad.xib */,
 				8A87368D1583208B000B035D /* Supporting Files */,
 			);
+			name = SampleApp;
 			path = KMZDraw;
 			sourceTree = "<group>";
 		};
@@ -152,6 +166,20 @@
 				8A8736B01583208B000B035D /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		8A8736BE158320EF000B035D /* lib */ = {
+			isa = PBXGroup;
+			children = (
+				8A8736BF1583218B000B035D /* KMZDrawView.h */,
+				8A8736C01583218B000B035D /* KMZDrawView.m */,
+				8A8736C3158322EF000B035D /* KMZLine.h */,
+				8A8736C4158322EF000B035D /* KMZLine.m */,
+				8A8736C7158327DA000B035D /* KMZFrame.h */,
+				8A8736C8158327DA000B035D /* KMZFrame.m */,
+			);
+			name = lib;
+			path = KMZDraw/lib;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -226,8 +254,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				8A8736911583208B000B035D /* InfoPlist.strings in Resources */,
-				8A87369D1583208B000B035D /* KMZViewController_iPhone.xib in Resources */,
-				8A8736A01583208B000B035D /* KMZViewController_iPad.xib in Resources */,
+				8A87369D1583208B000B035D /* SampleViewController_iPhone.xib in Resources */,
+				8A8736A01583208B000B035D /* SampleViewController_iPad.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -263,8 +291,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				8A8736931583208B000B035D /* main.m in Sources */,
-				8A8736971583208B000B035D /* KMZAppDelegate.m in Sources */,
-				8A87369A1583208B000B035D /* KMZViewController.m in Sources */,
+				8A8736971583208B000B035D /* SampleAppDelegate.m in Sources */,
+				8A87369A1583208B000B035D /* SampleViewController.m in Sources */,
+				8A8736C11583218B000B035D /* KMZDrawView.m in Sources */,
+				8A8736C5158322EF000B035D /* KMZLine.m in Sources */,
+				8A8736C9158327DA000B035D /* KMZFrame.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -273,6 +304,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				8A8736B51583208B000B035D /* KMZDrawTests.m in Sources */,
+				8A8736C21583218B000B035D /* KMZDrawView.m in Sources */,
+				8A8736C6158322EF000B035D /* KMZLine.m in Sources */,
+				8A8736CA158327DA000B035D /* KMZFrame.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -295,20 +329,20 @@
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
 		};
-		8A87369B1583208B000B035D /* KMZViewController_iPhone.xib */ = {
+		8A87369B1583208B000B035D /* SampleViewController_iPhone.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
 				8A87369C1583208B000B035D /* en */,
 			);
-			name = KMZViewController_iPhone.xib;
+			name = SampleViewController_iPhone.xib;
 			sourceTree = "<group>";
 		};
-		8A87369E1583208B000B035D /* KMZViewController_iPad.xib */ = {
+		8A87369E1583208B000B035D /* SampleViewController_iPad.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
 				8A87369F1583208B000B035D /* en */,
 			);
-			name = KMZViewController_iPad.xib;
+			name = SampleViewController_iPad.xib;
 			sourceTree = "<group>";
 		};
 		8A8736B01583208B000B035D /* InfoPlist.strings */ = {
