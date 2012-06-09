@@ -45,7 +45,8 @@
 }
 
 - (void)dealloc {
-    CFRelease(self.path);
+#warning analyzeで警告
+    CFRelease(self.path); 
     self.points = nil;
     self.penColor = nil;
 }
