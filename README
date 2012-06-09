@@ -11,7 +11,7 @@ See the sample project.
 
 * Feature
 
-- Draw with touch
+- Draw with touches
 - Erase line
 - Undo/Redo
 - Choose pen color (comming soon)
@@ -20,7 +20,7 @@ See the sample project.
 
 * The Author
 
-Kentaro Matsumae <kentaro DTO matsumae AT gmail DOT com>
+Kentaro Matsumae <kentaro DOT matsumae AT gmail DOT com>
 http://www.facebook.com/kenmaz
 https://twitter.com/#!/kenmaz
 
