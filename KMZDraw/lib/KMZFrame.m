@@ -56,7 +56,7 @@
 	[self _drawSetup:contextRef line:line];
 	
 	CGContextBeginPath(contextRef);
-	CGContextAddPath(contextRef, line.path);
+	CGContextAddPath(contextRef, (__bridge CGPathRef)line.path);
 	CGContextStrokePath(contextRef);
 }
 

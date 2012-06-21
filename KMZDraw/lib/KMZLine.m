@@ -28,25 +28,25 @@
         self.penMode = _penMode;
         self.penWidth = _penWidth;
         self.penColor = _color;
-        self.path = _path;
-        CFRetain(_path);
+        self.path = CFBridgingRelease(_path);
     }
     return self;
 }
 
 - (void)moveToPoint:(CGPoint)point {
-    CGPathMoveToPoint(path, NULL, point.x, point.y);
+    CGMutablePathRef pathRef = (CGMutablePathRef)CFBridgingRetain(self.path);
+    CGPathMoveToPoint(pathRef, NULL, point.x, point.y);
     [self _addPoint:point];    
 }
 
 - (void)addLineToPoint:(CGPoint)point {
-    CGPathAddLineToPoint(path, NULL, point.x, point.y);
+    CGMutablePathRef pathRef = (CGMutablePathRef)CFBridgingRetain(self.path);
+    CGPathAddLineToPoint(pathRef, NULL, point.x, point.y);
     [self _addPoint:point];
 }
 
 - (void)dealloc {
-#warning analyzeで警告
-    CFRelease(self.path); 
+    self.path = nil;
     self.points = nil;
     self.penColor = nil;
 }

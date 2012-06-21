@@ -20,7 +20,7 @@ typedef NSUInteger KMZLinePenMode;
 @property NSUInteger penWidth;
 @property (nonatomic, strong) UIColor* penColor;
 @property (nonatomic, strong) NSMutableArray* points;
-@property CGMutablePathRef path;
+@property (nonatomic, strong) id path;
 
 - (id)initWithPenMode:(KMZLinePenMode)penMode width:(NSUInteger)penWidth color:(UIColor*)color path:(CGMutablePathRef)path;
 - (void)moveToPoint:(CGPoint)point;
