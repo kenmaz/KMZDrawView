@@ -44,6 +44,9 @@
 #pragma mark private functions
 
 - (void)_setupWithFrame:(CGRect)frame {
+    self.backgroundColor = [UIColor whiteColor];
+    self.userInteractionEnabled = YES;
+
     self.currentFrame = [[KMZFrame alloc] initWithSize:frame.size];
     self.penMode = KMZLinePenModePencil;
     self.penWidth = 10;
@@ -58,7 +61,6 @@
     
     CGMutablePathRef path = CGPathCreateMutable();
     self.currentLine = [[KMZLine alloc] initWithPenMode:self.penMode width:self.penWidth color:self.penColor path:path];
-    CFRelease(path);
     
 	[self.currentFrame addLine:currentLine];
     
