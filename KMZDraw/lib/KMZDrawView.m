@@ -65,6 +65,9 @@
 	[self.currentFrame addLine:self.currentLine];
     
 	[self.currentLine moveToPoint:pt];
+    
+    UIGraphicsBeginImageContext(self.frame.size);
+	[self.image drawInRect:CGRectMake(0, 0, self.frame.size.width, self.frame.size.height)];
 }
 
 - (void) touchesMoved:(NSSet *)touches withEvent:(UIEvent *)event {
@@ -76,18 +79,20 @@
    
 	[self.currentLine addLineToPoint:pt];
 	
-	UIGraphicsBeginImageContext(self.frame.size);
-	[self.image drawInRect:CGRectMake(0, 0, self.frame.size.width, self.frame.size.height)];
 	CGContextRef context = UIGraphicsGetCurrentContext();
 	[self.currentFrame drawLine:context line:self.currentLine beginPoint:self.lastPoint endPoint:pt];
 	self.image = UIGraphicsGetImageFromCurrentImageContext();
-	UIGraphicsEndImageContext();
 	
 	self.lastPoint = pt;
 }
 
+- (void)touchesCancelled:(NSSet *)touches withEvent:(UIEvent *)event {
+    UIGraphicsEndImageContext();
+}
+
 - (void) touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event {
 	if (!self.currentLine) {
+        UIGraphicsEndImageContext();
 		return;
 	}
 	
@@ -95,11 +100,10 @@
     
 	[self.currentLine addLineToPoint:pt];
 	
-	UIGraphicsBeginImageContext(self.frame.size);
-	[self.image drawInRect:CGRectMake(0, 0, self.frame.size.width, self.frame.size.height)];
 	CGContextRef context = UIGraphicsGetCurrentContext();
 	[self.currentFrame drawLine:context line:self.currentLine beginPoint:self.lastPoint endPoint:pt];
 	self.image = UIGraphicsGetImageFromCurrentImageContext();
+    
 	UIGraphicsEndImageContext();
 	
 	self.currentFrame.image = self.image;
