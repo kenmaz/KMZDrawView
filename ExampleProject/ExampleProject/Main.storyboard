@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5056" systemVersion="13E28" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="x1r-Qf-1ps">
     <dependencies>
-        <deployment defaultVersion="1536" identifier="iOS"/>
+        <deployment defaultVersion="1792" identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
     </dependencies>
     <scenes>
-        <!--Sample View Controller-->
+        <!--View Controller-->
         <scene sceneID="PML-lc-fe5">
             <objects>
-                <viewController id="x1r-Qf-1ps" customClass="SampleViewController" sceneMemberID="viewController">
+                <viewController id="x1r-Qf-1ps" customClass="KMZViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="6xF-cX-VRS"/>
                         <viewControllerLayoutGuide type="bottom" id="xRk-ds-v6N"/>
@@ -65,10 +65,10 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="drawView" destination="91O-QM-eKm" id="JR9-63-YrO"/>
-                        <outlet property="penSelector" destination="zj7-ib-dqu" id="c8d-hD-pbm"/>
-                        <outlet property="redoButtonItem" destination="iaL-fO-fpr" id="Pjd-l6-RSc"/>
-                        <outlet property="undoButtonItem" destination="2ND-rD-g2S" id="D3k-EE-4wY"/>
+                        <outlet property="drawView" destination="91O-QM-eKm" id="GEO-yG-BrY"/>
+                        <outlet property="penSelector" destination="zj7-ib-dqu" id="IUA-hu-bnx"/>
+                        <outlet property="redoButtonItem" destination="iaL-fO-fpr" id="BTQ-PP-2uI"/>
+                        <outlet property="undoButtonItem" destination="2ND-rD-g2S" id="N6z-1K-2IA"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WR1-WZ-oc5" userLabel="First Responder" sceneMemberID="firstResponder"/>

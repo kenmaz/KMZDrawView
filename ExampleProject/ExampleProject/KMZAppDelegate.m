@@ -1,20 +1,21 @@
 //
 //  KMZAppDelegate.m
-//  KMZDraw
+//  ExampleProject
 //
-//  Created by Kentaro Matsumae on 12/06/09.
-//  Copyright (c) 2012年 __MyCompanyName__. All rights reserved.
+//  Created by Kentaro Matsumae on 2014/09/07.
+//  Copyright (c) 2014年 kenmaz.net. All rights reserved.
 //
 
-#import "SampleAppDelegate.h"
+#import "KMZAppDelegate.h"
 
-@implementation SampleAppDelegate
+@implementation KMZAppDelegate
 
-- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
+{
     // Override point for customization after application launch.
     return YES;
 }
-
+							
 - (void)applicationWillResignActive:(UIApplication *)application
 {
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.

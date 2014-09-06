@@ -1,0 +1,14 @@
+PODS:
+  - KMZDrawView (0.0.1)
+
+DEPENDENCIES:
+  - KMZDrawView (from `..`)
+
+EXTERNAL SOURCES:
+  KMZDrawView:
+    :path: ..
+
+SPEC CHECKSUMS:
+  KMZDrawView: 7b0ea98831dbcb507d861959efa2bd9c434cd154
+
+COCOAPODS: 0.33.1

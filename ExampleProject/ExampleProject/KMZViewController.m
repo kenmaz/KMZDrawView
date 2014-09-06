@@ -1,22 +1,22 @@
 //
 //  KMZViewController.m
-//  KMZDraw
+//  ExampleProject
 //
-//  Created by Kentaro Matsumae on 12/06/09.
-//  Copyright (c) 2012年 __MyCompanyName__. All rights reserved.
+//  Created by Kentaro Matsumae on 2014/09/07.
+//  Copyright (c) 2014年 kenmaz.net. All rights reserved.
 //
 
-#import "SampleViewController.h"
+#import "KMZViewController.h"
 #import "KMZDrawView.h"
 
-@interface SampleViewController () <KMZDrawViewDelegate>
+@interface KMZViewController () <KMZDrawViewDelegate>
 @property (weak, nonatomic) IBOutlet UISegmentedControl *penSelector;
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *undoButtonItem;
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *redoButtonItem;
 @property (weak, nonatomic) IBOutlet KMZDrawView *drawView;
 @end
 
-@implementation SampleViewController
+@implementation KMZViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -39,7 +39,7 @@
     if (idx == 0) {
         self.drawView.penMode = KMZLinePenModePencil;
     } else {
-        self.drawView.penMode = KMZLinePenModeEraser;   
+        self.drawView.penMode = KMZLinePenModeEraser;
     }
 }
 
