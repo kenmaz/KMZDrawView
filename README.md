@@ -1,13 +1,17 @@
+
 ## What is KMZDrawView
 
 KMZDrawView is a simple drawing view for iOS.
 
-This library is used in 'AnimeMaker' iOS app.
-http://itunes.apple.com/app/animemaker/id306785702?mt=8
+This library was made for [AnimeMaker](http://itunes.apple.com/app/animemaker/id306785702?mt=8).
 
 ## How to use
 
-See the example project.
+See [Example project](https://github.com/kenmaz/KMZDrawView/tree/master/ExampleProject).
+
+<p>
+  <img src="https://raw.github.com/kenmaz/KMZDrawView/resources/example.png" alt="KMZDrawView" title="KMZDrawView">
+</p>
 
 ## Feature
 
@@ -20,10 +24,10 @@ See the example project.
 
 ## Author
 
-Kentaro Matsumae <kentaro DOT matsumae AT gmail DOT com>
-http://www.facebook.com/kenmaz
-https://twitter.com/#!/kenmaz
+- Kentaro Matsumae (kenmaz)
+  - [github](https://github.com/kenmaz)
+  - [twitter](https://twitter.com/kenmaz)
 
 ## License
 
-KMZDrawView is available under the MIT license. See the LICENSE file for more info.
+- KMZDrawView is available under the [MIT license](https://raw.githubusercontent.com/kenmaz/KMZDrawView/master/LICENSE). 
