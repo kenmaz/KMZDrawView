@@ -15,9 +15,8 @@
 @synthesize frameSize;
 @synthesize image;
 
-- (id)initWithSize:(CGSize)size {
+- (id)init {
     if ((self = [super init])) {
-        self.frameSize = size;
         self.lines = [[NSMutableArray alloc] init];
         self.lineCursor = 0;
     }
@@ -73,7 +72,8 @@
 }
 
 - (void)drawImage:(CGContextRef)contextRef {
-    for (KMZLine* line in self.lines) {
+    for (int i = 0; i < self.lineCursor; i++) {
+        KMZLine* line = [self.lines objectAtIndex:i];
         [self drawLine:contextRef line:line];
     }
 }
