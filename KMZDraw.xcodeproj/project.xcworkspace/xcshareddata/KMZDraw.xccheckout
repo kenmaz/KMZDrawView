@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>E59EDAF5-38AA-4BC2-B9FE-089D43B71244</string>
+	<key>IDESourceControlProjectName</key>
+	<string>KMZDraw</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>44E19EBD-71EE-4C7C-9BD8-82C4F8C4D817</key>
+		<string>ssh://github.com/kenmaz/KMZDrawView.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>KMZDraw.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>44E19EBD-71EE-4C7C-9BD8-82C4F8C4D817</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>ssh://github.com/kenmaz/KMZDrawView.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>44E19EBD-71EE-4C7C-9BD8-82C4F8C4D817</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>44E19EBD-71EE-4C7C-9BD8-82C4F8C4D817</string>
+			<key>IDESourceControlWCCName</key>
+			<string>KMZDrawView</string>
+		</dict>
+	</array>
+</dict>
+</plist>

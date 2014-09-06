@@ -8,17 +8,16 @@
 
 #import "KMZDrawView.h"
 
+@interface KMZDrawView()
+@property (nonatomic) CGPoint lastPoint;
+@property (nonatomic) KMZFrame* currentFrame;
+@property (nonatomic) KMZLine* currentLine;
+@property (nonatomic) KMZLinePenMode penMode;
+@property (nonatomic) NSUInteger penWidth;
+@property (nonatomic) UIColor* penColor;
+@end
+
 @implementation KMZDrawView
-
-@synthesize delegate;
-
-@synthesize lastPoint;
-@synthesize currentFrame;
-@synthesize currentLine;
-
-@synthesize penMode;
-@synthesize penWidth;
-@synthesize penColor;
 
 - (id)initWithCoder:(NSCoder *)aDecoder {
     if ((self = [super initWithCoder:aDecoder])) {
@@ -35,36 +34,37 @@
     return self;
 }
 
-- (void)dealloc {
-    self.delegate = nil;
-    self.currentFrame = nil;
-    self.currentLine = nil;
-}
-
 #pragma mark private functions
 
 - (void)_setupWithFrame:(CGRect)frame {
     self.backgroundColor = [UIColor whiteColor];
     self.userInteractionEnabled = YES;
 
-    self.currentFrame = [[KMZFrame alloc] initWithSize:frame.size];
+    self.currentFrame = [[KMZFrame alloc] init];
     self.penMode = KMZLinePenModePencil;
     self.penWidth = 10;
     self.penColor = [UIColor blackColor];
 }
 
+- (void)layoutSubviews {
+    self.currentFrame.frameSize = self.frame.size;
+}
+
 #pragma mark UIResponder
 
-- (void) touchesBegan:(NSSet*)touches withEvent:(UIEvent*)event {
+- (void)touchesBegan:(NSSet*)touches withEvent:(UIEvent*)event {
 	CGPoint pt = [[touches anyObject] locationInView:self];
     self.lastPoint = pt;
     
     CGMutablePathRef path = CGPathCreateMutable();
-    self.currentLine = [[KMZLine alloc] initWithPenMode:self.penMode width:self.penWidth color:self.penColor path:path];
     
-	[self.currentFrame addLine:currentLine];
+    self.currentLine = [[KMZLine alloc] initWithPenMode:self.penMode
+                                                  width:self.penWidth
+                                                  color:self.penColor path:path];
     
-	[currentLine moveToPoint:pt];
+	[self.currentFrame addLine:self.currentLine];
+    
+	[self.currentLine moveToPoint:pt];
 }
 
 - (void) touchesMoved:(NSSet *)touches withEvent:(UIEvent *)event {
@@ -79,7 +79,7 @@
 	UIGraphicsBeginImageContext(self.frame.size);
 	[self.image drawInRect:CGRectMake(0, 0, self.frame.size.width, self.frame.size.height)];
 	CGContextRef context = UIGraphicsGetCurrentContext();
-	[currentFrame drawLine:context line:currentLine beginPoint:self.lastPoint endPoint:pt];
+	[self.currentFrame drawLine:context line:self.currentLine beginPoint:self.lastPoint endPoint:pt];
 	self.image = UIGraphicsGetImageFromCurrentImageContext();
 	UIGraphicsEndImageContext();
 	
@@ -98,17 +98,21 @@
 	UIGraphicsBeginImageContext(self.frame.size);
 	[self.image drawInRect:CGRectMake(0, 0, self.frame.size.width, self.frame.size.height)];
 	CGContextRef context = UIGraphicsGetCurrentContext();
-	[currentFrame drawLine:context line:self.currentLine beginPoint:self.lastPoint endPoint:pt];
+	[self.currentFrame drawLine:context line:self.currentLine beginPoint:self.lastPoint endPoint:pt];
 	self.image = UIGraphicsGetImageFromCurrentImageContext();
 	UIGraphicsEndImageContext();
 	
 	self.currentFrame.image = self.image;
     
-    [self.delegate drawView:self finishDrawLine:currentLine];
+    [self.delegate drawView:self finishDrawLine:self.currentLine];
 	self.currentLine = nil;
 }
 
 #pragma mark public function
+
+- (void)setPenMode:(KMZLinePenMode)penMode {
+    _penMode = penMode;
+}
 
 - (void)undo {
     [self.currentFrame undo];

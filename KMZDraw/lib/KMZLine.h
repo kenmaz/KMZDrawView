@@ -8,11 +8,10 @@
 
 #import <Foundation/Foundation.h>
 
-enum {
+typedef NS_ENUM(NSUInteger, KMZLinePenMode) {
     KMZLinePenModePencil,
     KMZLinePenModeEraser
 };
-typedef NSUInteger KMZLinePenMode;
 
 @interface KMZLine : NSObject
 

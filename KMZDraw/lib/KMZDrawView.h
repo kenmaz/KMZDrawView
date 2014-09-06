@@ -18,14 +18,8 @@
 @interface KMZDrawView : UIImageView
 
 @property (nonatomic, weak) id<KMZDrawViewDelegate> delegate;
-@property (nonatomic) CGPoint lastPoint;
-@property (nonatomic, strong) KMZFrame* currentFrame;
-@property (nonatomic, strong) KMZLine* currentLine;
 
-@property KMZLinePenMode penMode;
-@property NSUInteger penWidth;
-@property (nonatomic, strong) UIColor* penColor;
-
+- (void)setPenMode:(KMZLinePenMode)penMode;
 - (void)undo;
 - (void)redo;
 - (BOOL)isUndoable;

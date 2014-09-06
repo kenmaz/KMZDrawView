@@ -16,7 +16,6 @@
 @property (nonatomic) NSInteger lineCursor;
 @property (nonatomic, strong) UIImage* image;
 
-- (id)initWithSize:(CGSize)size;
 - (void)addLine:(KMZLine*)line;
 - (void)drawLine:(CGContextRef)contextRef 
             line:(KMZLine*)line 

@@ -72,9 +72,8 @@
 	UIGraphicsEndImageContext();
 }
 
-- (void)drawImage:(CGContextRef)contextRef {   
-    for (int i = 0; i < self.lineCursor; i++) {
-        KMZLine* line = [self.lines objectAtIndex:i];
+- (void)drawImage:(CGContextRef)contextRef {
+    for (KMZLine* line in self.lines) {
         [self drawLine:contextRef line:line];
     }
 }

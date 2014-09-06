@@ -10,25 +10,19 @@
 
 @implementation KMZLine
 
-@synthesize penMode;
-@synthesize penWidth;
-@synthesize penColor;
-@synthesize points;
-@synthesize path;
-
 #pragma mark public
 
-- (id)initWithPenMode:(KMZLinePenMode)_penMode 
-                width:(NSUInteger)_penWidth 
-                color:(UIColor*)_color 
-                 path:(CGMutablePathRef)_path {
+- (id)initWithPenMode:(KMZLinePenMode)penMode
+                width:(NSUInteger)penWidth
+                color:(UIColor*)color
+                 path:(CGMutablePathRef)path {
     
     if (self = [super init]) {
         self.points = [[NSMutableArray alloc] init];
-        self.penMode = _penMode;
-        self.penWidth = _penWidth;
-        self.penColor = _color;
-        self.path = CFBridgingRelease(_path);
+        self.penMode = penMode;
+        self.penWidth = penWidth;
+        self.penColor = color;
+        self.path = CFBridgingRelease(path);
     }
     return self;
 }
@@ -36,25 +30,11 @@
 - (void)moveToPoint:(CGPoint)point {
     CGMutablePathRef pathRef = (CGMutablePathRef)CFBridgingRetain(self.path);
     CGPathMoveToPoint(pathRef, NULL, point.x, point.y);
-    [self _addPoint:point];    
 }
 
 - (void)addLineToPoint:(CGPoint)point {
     CGMutablePathRef pathRef = (CGMutablePathRef)CFBridgingRetain(self.path);
     CGPathAddLineToPoint(pathRef, NULL, point.x, point.y);
-    [self _addPoint:point];
-}
-
-- (void)dealloc {
-    self.path = nil;
-    self.points = nil;
-    self.penColor = nil;
-}
-
-#pragma mark private
-
-- (void)_addPoint:(CGPoint)point {
-    
 }
 
 @end
