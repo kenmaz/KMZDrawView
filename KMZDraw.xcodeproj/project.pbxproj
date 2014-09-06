@@ -15,28 +15,10 @@
 		8A8736931583208B000B035D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A8736921583208B000B035D /* main.m */; };
 		8A8736971583208B000B035D /* SampleAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A8736961583208B000B035D /* SampleAppDelegate.m */; };
 		8A87369A1583208B000B035D /* SampleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A8736991583208B000B035D /* SampleViewController.m */; };
-		8A8736A81583208B000B035D /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A8736A71583208B000B035D /* SenTestingKit.framework */; };
-		8A8736A91583208B000B035D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A8736861583208B000B035D /* UIKit.framework */; };
-		8A8736AA1583208B000B035D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A8736881583208B000B035D /* Foundation.framework */; };
-		8A8736B21583208B000B035D /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8A8736B01583208B000B035D /* InfoPlist.strings */; };
-		8A8736B51583208B000B035D /* KMZDrawTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A8736B41583208B000B035D /* KMZDrawTests.m */; };
 		8A8736C11583218B000B035D /* KMZDrawView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A8736C01583218B000B035D /* KMZDrawView.m */; };
-		8A8736C21583218B000B035D /* KMZDrawView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A8736C01583218B000B035D /* KMZDrawView.m */; };
 		8A8736C5158322EF000B035D /* KMZLine.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A8736C4158322EF000B035D /* KMZLine.m */; };
-		8A8736C6158322EF000B035D /* KMZLine.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A8736C4158322EF000B035D /* KMZLine.m */; };
 		8A8736C9158327DA000B035D /* KMZFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A8736C8158327DA000B035D /* KMZFrame.m */; };
-		8A8736CA158327DA000B035D /* KMZFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A8736C8158327DA000B035D /* KMZFrame.m */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		8A8736AB1583208B000B035D /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 8A8736791583208B000B035D /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 8A8736811583208B000B035D;
-			remoteInfo = KMZDraw;
-		};
-/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		5E28DD0319BB108F002658D5 /* SampleApp.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = SampleApp.storyboard; sourceTree = "<group>"; };
@@ -52,12 +34,7 @@
 		8A8736961583208B000B035D /* SampleAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SampleAppDelegate.m; sourceTree = "<group>"; };
 		8A8736981583208B000B035D /* SampleViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SampleViewController.h; sourceTree = "<group>"; };
 		8A8736991583208B000B035D /* SampleViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SampleViewController.m; sourceTree = "<group>"; };
-		8A8736A61583208B000B035D /* KMZDrawTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KMZDrawTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8A8736A71583208B000B035D /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
-		8A8736AF1583208B000B035D /* KMZDrawTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "KMZDrawTests-Info.plist"; sourceTree = "<group>"; };
-		8A8736B11583208B000B035D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		8A8736B31583208B000B035D /* KMZDrawTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KMZDrawTests.h; sourceTree = "<group>"; };
-		8A8736B41583208B000B035D /* KMZDrawTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KMZDrawTests.m; sourceTree = "<group>"; };
 		8A8736BF1583218B000B035D /* KMZDrawView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KMZDrawView.h; sourceTree = "<group>"; };
 		8A8736C01583218B000B035D /* KMZDrawView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KMZDrawView.m; sourceTree = "<group>"; };
 		8A8736C3158322EF000B035D /* KMZLine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KMZLine.h; sourceTree = "<group>"; };
@@ -77,16 +54,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		8A8736A21583208B000B035D /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				8A8736A81583208B000B035D /* SenTestingKit.framework in Frameworks */,
-				8A8736A91583208B000B035D /* UIKit.framework in Frameworks */,
-				8A8736AA1583208B000B035D /* Foundation.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -95,7 +62,6 @@
 			children = (
 				8A8736BE158320EF000B035D /* lib */,
 				8A87368C1583208B000B035D /* SampleApp */,
-				8A8736AD1583208B000B035D /* KMZDrawTests */,
 				8A8736851583208B000B035D /* Frameworks */,
 				8A8736831583208B000B035D /* Products */,
 			);
@@ -105,7 +71,6 @@
 			isa = PBXGroup;
 			children = (
 				8A8736821583208B000B035D /* KMZDraw.app */,
-				8A8736A61583208B000B035D /* KMZDrawTests.octest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -146,25 +111,6 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		8A8736AD1583208B000B035D /* KMZDrawTests */ = {
-			isa = PBXGroup;
-			children = (
-				8A8736B31583208B000B035D /* KMZDrawTests.h */,
-				8A8736B41583208B000B035D /* KMZDrawTests.m */,
-				8A8736AE1583208B000B035D /* Supporting Files */,
-			);
-			path = KMZDrawTests;
-			sourceTree = "<group>";
-		};
-		8A8736AE1583208B000B035D /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				8A8736AF1583208B000B035D /* KMZDrawTests-Info.plist */,
-				8A8736B01583208B000B035D /* InfoPlist.strings */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
 		8A8736BE158320EF000B035D /* lib */ = {
 			isa = PBXGroup;
 			children = (
@@ -199,25 +145,6 @@
 			productReference = 8A8736821583208B000B035D /* KMZDraw.app */;
 			productType = "com.apple.product-type.application";
 		};
-		8A8736A51583208B000B035D /* KMZDrawTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 8A8736BB1583208B000B035D /* Build configuration list for PBXNativeTarget "KMZDrawTests" */;
-			buildPhases = (
-				8A8736A11583208B000B035D /* Sources */,
-				8A8736A21583208B000B035D /* Frameworks */,
-				8A8736A31583208B000B035D /* Resources */,
-				8A8736A41583208B000B035D /* ShellScript */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				8A8736AC1583208B000B035D /* PBXTargetDependency */,
-			);
-			name = KMZDrawTests;
-			productName = KMZDrawTests;
-			productReference = 8A8736A61583208B000B035D /* KMZDrawTests.octest */;
-			productType = "com.apple.product-type.bundle";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -240,7 +167,6 @@
 			projectRoot = "";
 			targets = (
 				8A8736811583208B000B035D /* KMZDraw */,
-				8A8736A51583208B000B035D /* KMZDrawTests */,
 			);
 		};
 /* End PBXProject section */
@@ -255,31 +181,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		8A8736A31583208B000B035D /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				8A8736B21583208B000B035D /* InfoPlist.strings in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXResourcesBuildPhase section */
-
-/* Begin PBXShellScriptBuildPhase section */
-		8A8736A41583208B000B035D /* ShellScript */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
-		};
-/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		8A87367E1583208B000B035D /* Sources */ = {
@@ -295,40 +197,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		8A8736A11583208B000B035D /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				8A8736B51583208B000B035D /* KMZDrawTests.m in Sources */,
-				8A8736C21583218B000B035D /* KMZDrawView.m in Sources */,
-				8A8736C6158322EF000B035D /* KMZLine.m in Sources */,
-				8A8736CA158327DA000B035D /* KMZFrame.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		8A8736AC1583208B000B035D /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 8A8736811583208B000B035D /* KMZDraw */;
-			targetProxy = 8A8736AB1583208B000B035D /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		8A87368F1583208B000B035D /* InfoPlist.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
 				8A8736901583208B000B035D /* en */,
-			);
-			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
-		8A8736B01583208B000B035D /* InfoPlist.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				8A8736B11583208B000B035D /* en */,
 			);
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
@@ -409,40 +284,6 @@
 			};
 			name = Release;
 		};
-		8A8736BC1583208B000B035D /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/KMZDraw.app/KMZDraw";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
-				);
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "KMZDraw/KMZDraw-Prefix.pch";
-				INFOPLIST_FILE = "KMZDrawTests/KMZDrawTests-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUNDLE_LOADER)";
-				WRAPPER_EXTENSION = octest;
-			};
-			name = Debug;
-		};
-		8A8736BD1583208B000B035D /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/KMZDraw.app/KMZDraw";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
-				);
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "KMZDraw/KMZDraw-Prefix.pch";
-				INFOPLIST_FILE = "KMZDrawTests/KMZDrawTests-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUNDLE_LOADER)";
-				WRAPPER_EXTENSION = octest;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -460,15 +301,6 @@
 			buildConfigurations = (
 				8A8736B91583208B000B035D /* Debug */,
 				8A8736BA1583208B000B035D /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		8A8736BB1583208B000B035D /* Build configuration list for PBXNativeTarget "KMZDrawTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				8A8736BC1583208B000B035D /* Debug */,
-				8A8736BD1583208B000B035D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
