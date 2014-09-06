@@ -93,8 +93,10 @@
 	CGContextSetLineJoin(contextRef, kCGLineJoinRound);
 	
 	if (line.penMode == KMZLinePenModeEraser) {
-		CGContextSetRGBStrokeColor(contextRef, 1.0, 1.0, 1.0, 1.0);
+        CGContextSetBlendMode(contextRef, kCGBlendModeClear);
+
 	} else {
+        CGContextSetBlendMode(contextRef, kCGBlendModeNormal);
 		CGColorRef ref = line.penColor.CGColor;
 		const CGFloat *colors = CGColorGetComponents(ref);
 		size_t numOfComponents = CGColorGetNumberOfComponents(ref);
