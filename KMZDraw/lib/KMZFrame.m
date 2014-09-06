@@ -10,22 +10,12 @@
 
 @implementation KMZFrame
 
-@synthesize lines;
-@synthesize lineCursor;
-@synthesize frameSize;
-@synthesize image;
-
 - (id)init {
     if ((self = [super init])) {
         self.lines = [[NSMutableArray alloc] init];
         self.lineCursor = 0;
     }
     return self;
-}
-
--(void)dealloc {
-    self.lines = nil;
-    self.image = nil;
 }
 
 #pragma mark public
