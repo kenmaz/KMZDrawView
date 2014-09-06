@@ -10,7 +10,7 @@ This library was made for [AnimeMaker](http://itunes.apple.com/app/animemaker/id
 See [Example project](https://github.com/kenmaz/KMZDrawView/tree/master/ExampleProject).
 
 <p>
-  <img src="https://raw.github.com/kenmaz/KMZDrawView/resources/example.png" alt="KMZDrawView" title="KMZDrawView">
+  <img src="https://raw.githubusercontent.com/kenmaz/KMZDrawView/master/resources/example.png" alt="KMZDrawView" title="KMZDrawView" style="border:solid 1px">
 </p>
 
 ## Feature
