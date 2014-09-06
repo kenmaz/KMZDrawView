@@ -5,6 +5,12 @@ KMZDrawView is a simple drawing view for iOS.
 
 This library was made for [AnimeMaker](http://itunes.apple.com/app/animemaker/id306785702?mt=8).
 
+## Install
+
+```
+pod 'KMZDrawView'
+```
+
 ## How to use
 
 See [Example project](https://github.com/kenmaz/KMZDrawView/tree/master/ExampleProject).
