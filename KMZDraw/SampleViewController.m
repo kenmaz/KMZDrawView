@@ -7,56 +7,31 @@
 //
 
 #import "SampleViewController.h"
+#import "KMZDrawView.h"
 
-@interface SampleViewController ()
-
+@interface SampleViewController () <KMZDrawViewDelegate>
+@property (weak, nonatomic) IBOutlet UISegmentedControl *penSelector;
+@property (weak, nonatomic) IBOutlet UIBarButtonItem *undoButtonItem;
+@property (weak, nonatomic) IBOutlet UIBarButtonItem *redoButtonItem;
+@property (weak, nonatomic) IBOutlet KMZDrawView *drawView;
 @end
 
 @implementation SampleViewController
-@synthesize penSelector;
-@synthesize colorButton;
-@synthesize drawView;
-@synthesize undoButtonItem;
-@synthesize redoButtonItem;
 
-- (void)viewDidLoad
-{
+- (void)viewDidLoad {
     [super viewDidLoad];
     self.drawView.delegate = self;
-    [self updateUndoRedoButton];
-}
-
-- (void)viewDidUnload
-{
-    [self setDrawView:nil];
-    [self setColorButton:nil];
-    [self setUndoButtonItem:nil];
-    [self setRedoButtonItem:nil];
-    [self setPenSelector:nil];
-    [super viewDidUnload];
-    // Release any retained subviews of the main view.
-}
-
-- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
-{
-    if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone) {
-        return (interfaceOrientation != UIInterfaceOrientationPortraitUpsideDown);
-    } else {
-        return YES;
-    }
+    [self _updateUndoRedoButton];
 }
 
 - (IBAction)touchUndoButton:(id)sender {
     [self.drawView undo];
-    [self updateUndoRedoButton];
+    [self _updateUndoRedoButton];
 }
 
 - (IBAction)touchRedoButton:(id)sender {
     [self.drawView redo];
-    [self updateUndoRedoButton];
-}
-
-- (IBAction)touchColorButton:(id)sender {
+    [self _updateUndoRedoButton];
 }
 
 - (IBAction)touchPenSelector:(id)sender {
@@ -68,14 +43,15 @@
     }
 }
 
-- (void)updateUndoRedoButton {
+- (void)_updateUndoRedoButton {
     self.undoButtonItem.enabled = [self.drawView isUndoable];
     self.redoButtonItem.enabled = [self.drawView isRedoable];
 }
 
 #pragma mark KMZDrawViewDelegate
+
 - (void)drawView:(KMZDrawView*)drawView finishDrawLine:(KMZLine*)line {
-    [self updateUndoRedoButton];
+    [self _updateUndoRedoButton];
 }
 
 @end

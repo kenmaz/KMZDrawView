@@ -8,24 +8,10 @@
 
 #import "SampleAppDelegate.h"
 
-#import "SampleViewController.h"
-
 @implementation SampleAppDelegate
 
-@synthesize window = _window;
-@synthesize viewController = _viewController;
-
-- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
-{
-    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
-    if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone) {
-        self.viewController = [[SampleViewController alloc] initWithNibName:@"SampleViewController_iPhone" bundle:nil];
-    } else {
-        self.viewController = [[SampleViewController alloc] initWithNibName:@"SampleViewController_iPad" bundle:nil];
-    }
-    self.window.rootViewController = self.viewController;
-    [self.window makeKeyAndVisible];
     return YES;
 }
 
