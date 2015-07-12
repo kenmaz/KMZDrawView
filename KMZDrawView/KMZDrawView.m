@@ -66,7 +66,7 @@
     
 	[self.currentLine moveToPoint:pt];
     
-    UIGraphicsBeginImageContext(self.frame.size);
+    UIGraphicsBeginImageContextWithOptions(self.bounds.size, NO, 0.0);
 	[self.image drawInRect:CGRectMake(0, 0, self.frame.size.width, self.frame.size.height)];
 }
 
